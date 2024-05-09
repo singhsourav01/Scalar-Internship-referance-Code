@@ -1,0 +1,65 @@
+<!-- date pipe -->
+<div>
+  <p>Today is {{today | date}}</p>
+  <p>Or if you prefer, {{today | date:'fullDate'}}</p>
+  <p>The time is {{today | date:'h:mm a z'}}</p>
+  <p>The hero's birthday is {{ birthday | date }}</p>
+</div>
+
+<!-- uppercase and lowercase -->
+<div>
+  <label>Name: </label><input #name (keyup)="change(name.value)" type="text" />
+  <p>In lowercase:</p>
+  <pre>'{{ value | lowercase }}'</pre>
+  <p>In uppercase:</p>
+  <pre>'{{ value | uppercase }}'</pre>
+</div>
+
+<!-- currency pipe -->
+<div>
+  <p>A: {{ a | currency }}</p>
+</div>
+
+
+<!-- decimal pipe -->
+<div>
+  {{ pi | number }}<br>
+  {{ pi | number: '4.1-5' }}<br>
+
+  <!-- Not working -->
+  <!-- {{ pi | number: '4.1-5' : 'fr' }} -->
+  <!-- {{ pi | number:'4.1-5':'fr' }} -->
+</div>
+
+<!-- percentage pipe -->
+<div>
+  <p>A: {{ a | percent }}</p>
+
+</div>
+
+
+<!-- async pipe -->
+<div>
+  <code>promise|async</code>:
+  <button (click)="clicked()">{{ arrived ? 'Reset' : 'Resolve' }}</button>
+  <span>Wait for it... {{ greeting | async }}</span>
+</div>
+
+
+<!-- JsonPipe -->
+<div>
+  <p>Without JSON pipe:</p>
+  <pre>{{ object }}</pre>
+  <p>With JSON pipe:</p>
+  <pre>{{ object | json }}</pre>
+</div>
+
+<div class="custompipe">
+  <app-custom-pipe></app-custom-pipe>
+</div>
+
+<!-- manually created a custom pipe -->
+<div>
+  <p>{{ "sourav" | custom }}</p>
+
+</div>

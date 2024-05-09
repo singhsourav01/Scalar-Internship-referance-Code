@@ -1,0 +1,16 @@
+label{
+    width: 4rem !important;
+    display: inline-block;
+    margin: 0.5rem 0rem;
+}
+
+button{
+    margin-top: 0.5rem;
+    width: 100%;
+    background-color: greenyellow;
+    padding: 0.4rem;
+}
+
+input{
+    width: 98%;
+}
